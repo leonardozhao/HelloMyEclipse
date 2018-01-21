@@ -1,3 +1,6 @@
+// Java8 - Getting User Input
+import java.util.Scanner;
+
 /**
  * @author Leonardo Zhao
  * My First Java Program
@@ -41,7 +44,13 @@ public class HelloMyEclipse {
 		// Java7 - Strings
 		soloStrings(7, "Strings");
 
+		// Java8 - Getting User Input
+		soloGettingUserInput(8, "Getting User Input");
+		
 		// Java7 - 
+		
+		// print The End
+		System.out.println("\r\nThe End");
 	}
 
 	// Java3 - Java Comments
@@ -157,11 +166,47 @@ public class HelloMyEclipse {
 		// TODO Auto-generated method stub
 		int test1 = 5;
 		++test1; 
-		System.out.println(test1);
+		System.out.println("Increment of 5 is " + test1);
 		
 		int test2 = 5;
 		--test2;
-		System.out.println(test2);
+		System.out.println("Derement of 5 is " + test2);
+		
+		int x = 0, y = 0;
+		
+		x = 34;
+		y = ++x;
+		System.out.println("x = " + x + "; y = " + y + ";");
+
+		x = 34;
+		y = x++;
+		System.out.println("x = " + x + "; y = " + y + ";");
+
+		int num1 = 0, num2 = 0;
+		num1 = 4;
+		num2 = 8;
+		num2 += num1;
+		System.out.println("num1 = " + num1 + "; num2 = " + num2 + ";");
+		
+		num1 = 4;
+		num2 = 8;
+		num2 -= num1;
+		System.out.println("num1 = " + num1 + "; num2 = " + num2 + ";");
+
+		num1 = 4;
+		num2 = 8;
+		num2 *= num1;
+		System.out.println("num1 = " + num1 + "; num2 = " + num2 + ";");
+		
+		num1 = 4;
+		num2 = 8;
+		num2 /= num1;
+		System.out.println("num1 = " + num1 + "; num2 = " + num2 + ";");
+
+		num1 = 4;
+		num2 = 8;
+		num2 %= num1;
+		System.out.println("num1 = " + num1 + "; num2 = " + num2 + ";");
 
 		return;
 	}
@@ -187,7 +232,27 @@ public class HelloMyEclipse {
 		return;
 	}
 
+	// Java8 - Getting User Input
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloGettingUserInput(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
 
+		// TODO Auto-generated method stub
+		Scanner myVar = new Scanner(System.in);
+		System.out.println("Please input a sentence that you want to say most:");
+		System.out.println(myVar.nextLine());
+		System.out.println("Your lucky number is:");
+		System.out.println(myVar.nextInt());
+		System.out.println("Give me a word:");
+		System.out.println(myVar.next());
+		return;
+	}
+	
 	// Java3 - Java Comments
 	/* (non-Javadoc)
      * @author Leonardo Zhao
