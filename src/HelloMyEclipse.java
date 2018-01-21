@@ -1,11 +1,13 @@
+// Java8 - Getting User Input
+import java.util.Scanner;
+
 /**
  * @author Leonardo Zhao
- * You First Java Program
+ * My First Java Program
  */
 public class HelloMyEclipse {
 
 	// Java2 - A Hello World Program
-
 	/**
 	 * Hello World
      * author Leonardo Zhao
@@ -15,17 +17,53 @@ public class HelloMyEclipse {
      * throws 抛出异常的描述
      * deprecated 废弃，建议用户不再使用该方法 
      * @author Leonardo Zhao
-     * @version 版本1.0
+     * @version 1.0
      * @param args default param of main
      */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// print chapter
+		System.out.println("\r\n#Java#" + 2 + " " + "A Hello World Program" + "\r\n");
 		// System.out.println()
-		System.out.println("\r\nHello World!\r\n");
+		System.out.println("Hello World!");
 		// Semicolons in Java
-		System.out.println("I am learning Java!\r\n");
+		System.out.println("I am learning Java!");
 
 		// Java3 - Java Comments
+		soloComments(3, "Java Comments");
+		
+		// Java4 - Variables
+		soloVariables(4, "Variables");
+
+		// Java5 - Primitive Operators
+		soloPrimitiveOperators(5, "Primitive Operators");
+	
+		// Java6 - Increment & Decrement
+		soloIncrementDecrement(6, "Increment & Decrement");
+
+		// Java7 - Strings
+		soloStrings(7, "Strings");
+
+		// Java8 - Getting User Input
+		soloGettingUserInput(8, "Getting User Input");
+		
+		// Java7 - 
+		
+		// print The End
+		System.out.println("\r\nThe End");
+	}
+
+	// Java3 - Java Comments
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloComments(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
 
 		//This is a single-line comment
 		int x = 5;//a single-line comment after code
@@ -47,8 +85,24 @@ public class HelloMyEclipse {
 		/**************************************
 		This is the start of a method
 		**************************************/
-		
-		// Java4 - Variables
+
+		x = x * iChapter;
+
+		return;
+	}
+
+	// Java4 - Variables
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloVariables(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+
 		String name = "David";
 		int age = 42;
 		double score = 15.9;
@@ -56,9 +110,21 @@ public class HelloMyEclipse {
 		boolean online = true;
 		int a = 42, b = 11;
 
-		// Java5 - Primitive Operators
-		x = 6 + 3;
-		
+		return;
+	}
+	
+
+	// Java5 - Primitive Operators
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloPrimitiveOperators(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
 		int sum1 = 50 + 10;
 		int sum2 = sum1 + 66;
 		int sum3 = sum1 + sum2;
@@ -83,18 +149,124 @@ public class HelloMyEclipse {
 		int quotient = value / 6;
 		int res = value % 6;
 		System.out.format("value = %d, quotient = %d, res = %d\r\n", value, quotient, res);
-		
-		// Java6 - Increment & Decrement
+
+		return;
+	}
+	
+	// Java6 - Increment & Decrement
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloIncrementDecrement(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
 		int test1 = 5;
 		++test1; 
-		System.out.println(test1);
+		System.out.println("Increment of 5 is " + test1);
 		
 		int test2 = 5;
 		--test2;
-		System.out.println(test2);
+		System.out.println("Derement of 5 is " + test2);
 		
+		int x = 0, y = 0;
+		
+		x = 34;
+		y = ++x;
+		System.out.println("x = " + x + "; y = " + y + ";");
+
+		x = 34;
+		y = x++;
+		System.out.println("x = " + x + "; y = " + y + ";");
+
+		int num1 = 0, num2 = 0;
+		num1 = 4;
+		num2 = 8;
+		num2 += num1;
+		System.out.println("num1 = " + num1 + "; num2 = " + num2 + ";");
+		
+		num1 = 4;
+		num2 = 8;
+		num2 -= num1;
+		System.out.println("num1 = " + num1 + "; num2 = " + num2 + ";");
+
+		num1 = 4;
+		num2 = 8;
+		num2 *= num1;
+		System.out.println("num1 = " + num1 + "; num2 = " + num2 + ";");
+		
+		num1 = 4;
+		num2 = 8;
+		num2 /= num1;
+		System.out.println("num1 = " + num1 + "; num2 = " + num2 + ";");
+
+		num1 = 4;
+		num2 = 8;
+		num2 %= num1;
+		System.out.println("num1 = " + num1 + "; num2 = " + num2 + ";");
+
+		return;
+	}
+	
+	// Java7 - Strings
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloStrings(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		String s = "SoloLearn";
+		
+		String firstName, lastName;
+		firstName = "David";
+		lastName = "Williams";
+		System.out.println("My name is " + firstName + " " + lastName);
+		
+		return;
 	}
 
+	// Java8 - Getting User Input
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloGettingUserInput(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
 
+		// TODO Auto-generated method stub
+		Scanner myVar = new Scanner(System.in);
+		System.out.println("Please input a sentence that you want to say most:");
+		System.out.println(myVar.nextLine());
+		System.out.println("Your lucky number is:");
+		System.out.println(myVar.nextInt());
+		System.out.println("Give me a word:");
+		System.out.println(myVar.next());
+		return;
+	}
+	
+	// Java3 - Java Comments
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	/*
+	public static void soloComments(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
 
+		// TODO Auto-generated method stub
+
+		return;
+	}
+	*/
 }
