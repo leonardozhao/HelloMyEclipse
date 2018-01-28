@@ -6,6 +6,8 @@ import java.util.Scanner;
  * My First Java Program
  */
 public class HelloMyEclipse {
+	// Java8 - Getting User Input
+	final static Scanner scanner=new Scanner(System.in);
 
 	// Java2 - A Hello World Program
 	/**
@@ -22,6 +24,13 @@ public class HelloMyEclipse {
      */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+		    @Override
+		    public void run() {
+		        scanner.close();
+		    }
+		});
+
 		// print chapter
 		System.out.println("\r\n#Java#" + 2 + " " + "A Hello World Program" + "\r\n");
 		// System.out.println()
@@ -47,6 +56,42 @@ public class HelloMyEclipse {
 		// Java8 - Getting User Input
 		soloGettingUserInput(8, "Getting User Input");
 		
+		// Java9 - Getting User Input
+		soloConditionalStatements(9, "Conditional Statements");
+
+		// Java10 - Getting User Input
+		soloNestedIfStatements(10, "Nested if Statements");
+		
+		// Java11 - Getting User Input
+		soloElseIfStatement(11, "else if Statement");
+
+		// Java12 - Getting User Input
+		soloLogicalStatements(12, "Logical Statements");
+
+		// Java13 - Getting User Input
+		soloTheSwitchStatement(13, "The switch Statement");
+
+		// Java14 - Getting User Input
+		soloWhileLoops(14, "While Loops");
+
+		// Java15 - Getting User Input
+		soloForLoops(15, "For Loops");
+
+		// Java16 - Getting User Input
+		soloDoWhileLoops(16, "do while Loops");
+
+		// Java17 - Getting User Input
+		soloArrays(17, "Arrays");
+
+		// Java18 - Getting User Input
+		soloSummingElementsInArrays(18, "Summing Elements in Arrays");
+
+		// Java19 - Getting User Input
+		soloEnhancedForLoop(19, "Enhanced for Loop");
+
+		// Java20 - Getting User Input
+		soloMultidimensionalArrays(20, "Multidimensional Arrays");
+
 		// Java7 - 
 		
 		// print The End
@@ -243,16 +288,459 @@ public class HelloMyEclipse {
 		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
 
 		// TODO Auto-generated method stub
-		Scanner myVar = new Scanner(System.in);
+		//Scanner myVar = new Scanner(System.in);
 		System.out.println("Please input a sentence that you want to say most:");
-		System.out.println(myVar.nextLine());
-		System.out.println("Your lucky number is:");
-		System.out.println(myVar.nextInt());
-		System.out.println("Give me a word:");
-		System.out.println(myVar.next());
+		//System.out.println(myVar.nextLine());
+		System.out.println(scanner.nextLine());
+
+		/*System.out.println("Your lucky number is:");
+		System.out.println(myVar.nextInt());*/
+
+		/*System.out.println("Give me a word:");
+		System.out.println(myVar.next());*/
+		
+		//myVar.close();
 		return;
 	}
-	
+
+
+	// Java9 - Conditional Statements
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloConditionalStatements(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int x = 7;
+		
+		if(x < 42){
+			System.out.println("Hi");
+		}
+
+		int age = 30;
+		System.out.println("How old are you? (Only for older than 16 years old)");
+		age = scanner.nextInt();
+		System.out.println(age);
+
+		if(age < 16){
+			System.out.println("Too Young");			
+		} else {
+			System.out.println("Welcome!");
+		}
+
+		return;
+	}
+
+	// Java10 - Nested If Statements
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloNestedIfStatements(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int age = 25;
+		System.out.println("How old are you? (Only for older than 16 years old)");
+		age = scanner.nextInt();
+		System.out.println(age);
+
+		if(age > 0){
+			if(age > 16){
+				System.out.println("Welcome!");				
+			} else {
+				System.out.println("Too Young");
+			}			
+		} else {
+			System.out.println("Error");
+			
+		}
+
+		return;
+	}
+
+	// Java11 - Else If Statement
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloElseIfStatement(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int age = 25;
+		System.out.println("How old are you? (Only for older than 16 years old)");
+		age = scanner.nextInt();
+		System.out.println(age);
+
+		if(age <= 0){
+			System.out.println("Error");
+		} else if(age <= 16){
+			System.out.println("Too Young");								
+		} else if(age < 100){
+			System.out.println("Welcome!");			
+		} else {
+			System.out.println("Really?");
+		}
+
+		return;
+	}
+
+	// Java12 - Logical Statements
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloLogicalStatements(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int age = 30, money = 1000;
+		
+		if(age > 18){
+			if(money >500){
+				System.out.println("Welcome!");
+			}
+		}
+
+		if(age > 18 && money > 500){
+			System.out.println("Welcome!!");
+		}
+
+		age = 25;
+		money = 100;
+		
+		if(age > 18 || money > 500){
+			System.out.println("Welcome!!!");
+		}
+		
+		age = 18;
+		if(!(age > 18)){
+			System.out.println("Too Young");
+		} else {
+			System.out.println("Welcome!!!!");
+		}
+		
+		return;
+	}
+
+	// Java13 - The Switch Statement
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloTheSwitchStatement(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int day = 3;
+		
+		System.out.println("What day is today?");
+		day = scanner.nextInt();
+		System.out.println(day);
+		switch(day){
+		case 1:
+			System.out.println("Monday");
+			break;
+		case 2:
+			System.out.println("Tuesday");
+			break;
+		case 3:
+			System.out.println("Wednesday");
+			break;
+		case 4:
+			System.out.println("Thursday");
+			break;
+		case 5:
+			System.out.println("Friday");
+			break;
+		case 6:
+			System.out.println("Saturday");
+			break;
+		case 7:
+			System.out.println("Sunday");
+			break;
+		default:
+			System.out.println("Error");
+		}
+		
+		return;
+	}
+
+	// Java14 - While Loops
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloWhileLoops(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int x = 3;
+		
+		System.out.println("The 1st while loop:");
+		while(x > 0){
+			System.out.println(x);
+			x--;
+		}
+		
+		System.out.println("The 2nd while loop:");
+		x = 6;
+		while(x < 10){
+			System.out.println(x);
+			x++;
+		}
+
+		return;
+	}
+
+	// Java15 - For Loops
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloForLoops(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		System.out.println("The 1st for loop:");
+		for(int x = 1; x <= 5; x++){
+			System.out.println(x);
+		}
+
+		System.out.println("The 2nd for loop:");
+		int x = 1;
+		for(; x <= 5;){
+			System.out.println(x);
+			x++;
+		}
+
+		System.out.println("The 3rd for loop:");
+		for(x = 0; x <= 10; x=x+2){
+			System.out.println(x);
+		}
+
+		return;
+	}
+
+	// Java16 - Do While Loops
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloDoWhileLoops(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int x = 1;
+
+		System.out.println("The 1st do while loop:");
+		do{
+			System.out.println(x);
+			x++;
+		}while(x<5);
+
+		System.out.println("The 2nd while loop:");
+		x = 1;
+		{
+			System.out.println(x);
+			x++;
+		}
+		while(x<5){
+			System.out.println(x);
+			x++;
+		}
+
+		System.out.println("break:");
+		x = 1;
+		while(x>0){
+			System.out.println(x);
+			if(x == 4){
+				break;
+			}
+			x++;
+		}
+
+		System.out.println("continue:");
+		for(x = 10; x<= 40; x=x+10){
+			if(x == 30){
+				continue;
+			}
+			System.out.println(x);
+		}
+		
+		return;
+	}
+
+	// Java17 - Arrays
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloArrays(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int[] arr1;
+		int[] arr2 = new int[5];
+		
+		arr1 = new int[6];
+		arr1[5] = 123;
+		
+		arr2[2] = 42;
+		
+		System.out.println("arr1[5] = " + arr1[5]);
+		System.out.println("arr2[2] = " + arr2[2]);
+		
+		int[] arr3 = {1, 2, 3, 4, 5, 6};
+		String[] myNames= {"A", "B", "C", "D", "E", "F"};
+
+		System.out.println("arr3[5] = " + arr3[5]);
+		System.out.println("myNames[2] = " + myNames[2]);
+		
+		return;
+	}
+
+	// Java18 - Summing Elements In Arrays
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloSummingElementsInArrays(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int[] intArr = new int[5];
+		
+		System.out.println("the length of intArr is " + intArr.length);
+		
+		int[] myArr = {6, 42, 3, 7};
+		int sum = 0;
+		for(int x=0; x < myArr.length; x++){
+			sum += myArr[x];
+		}
+		System.out.println("sum of myArr = " + sum);
+
+		return;
+	}
+
+	// Java19 - Enhanced For Loop (for each loop)
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloEnhancedForLoop(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int[] primes = {2, 3, 5, 6, 7};
+		
+		for(int t: primes){
+			System.out.println(t + ",");
+		}
+
+		return;
+	}
+
+	// Java20 - Multidimensional Arrays
+	/* (non-Javadoc)
+     * @author Leonardo Zhao
+     * @version 1.0
+     * @param iChapter Chapter Number strChapter Chapter Name
+	 */
+	public static void soloMultidimensionalArrays(int iChapter, String strChapter) {
+		// print chapter
+		System.out.println("\r\n#Java#" + iChapter + " " + strChapter + "\r\n");
+
+		// TODO Auto-generated method stub
+		int[][] sample = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+		
+		for(int[] x: sample){
+			for(int y: x){
+				if(y != x[x.length - 1]){
+					System.out.printf("%d, ", y);
+				}
+				else
+				{
+					System.out.printf("%d\r\n", y);
+				}
+				
+			}
+		}
+		
+		System.out.println("sample[2][0] =" + sample[2][0]);
+		
+		System.out.printf("\r\n");
+				
+		String array[][] = {{"Hey", "John", "Bye"}, {"John", "Johnson", "Hello"}, {"Leo", "Leonardo", "Hi"}};
+
+		//int i = 0;
+		for(String[] x: array){
+			for(String y: x){
+				//i++;
+				//if(0 != (i % array[0].length)){
+				if(y != x[x.length - 1]){
+					System.out.printf("%s, ", y);
+				}
+				else
+				{
+					System.out.printf("%s\r\n", y);
+				}
+				
+			}
+		}
+
+		System.out.println("array[1][1] = " + array[1][1]);
+		
+		System.out.printf("\r\n");
+		
+		int[][] myArr = {{1, 2, 3}, {4}, {5, 6, 7}};
+		myArr[0][2] = 42;
+		int z = myArr[1][0];
+		
+		for(int[] x: myArr){
+			for(int y: x){
+				if(y != x[x.length - 1]){
+					System.out.printf("%d, ", y);
+				}
+				else
+				{
+					System.out.printf("%d\r\n", y);
+				}
+				
+			}
+		}
+		
+		System.out.println("myArr[0][2] = " + myArr[0][2]);
+		System.out.println("myArr[1][0] = " + z);
+
+		return;
+	}
+
 	// Java3 - Java Comments
 	/* (non-Javadoc)
      * @author Leonardo Zhao
